@@ -1,0 +1,31 @@
+<mat-card>
+  <h4>Contact Information</h4>
+  <div class="fre mat-elevation-z8">
+    <img class="avatar mat-elevation-z8" src="assets/img5.jpg" />
+    <h4 >Gerald L. Mosca</h4>
+    <p >College of Engineering</p>
+    <P >I.T</P>
+  </div>
+  <mat-list-item>
+    <p class="designation"><mat-icon>phone</mat-icon>Phone Number:
+    </p>
+    <p class="designation1"><mat-icon>facebook</mat-icon>Facebook Account:</p>
+
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  <form>
+    <h4>Select Contact Information</h4>
+    <mat-form-field appearance="legacy">
+      <mat-label>Select Contact</mat-label>
+      <mat-select [(ngModel)]="selectedValue" name="cons">
+        <mat-option *ngFor="let food of contact" [value]="food.value">
+          {{food.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <p> Contact Information: {{selectedValue}} </p>
+  </form>
+
+</mat-card>
+
+
